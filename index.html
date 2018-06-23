@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>project</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- <script src="app.js" charset="utf-8"></script>  -->
+<link rel="stylesheet" href="style.css">
+<script src="typed.js" charset="utf-8"></script>
+
+  </head>
+  <body >
+    <div class="row" id="me">
+    <div class="container-fluid">
+      <header>
+        <nav  >
+          <h1>  <span style="color:white;" >Psycho_<span style="color:#3885a1;">codes</span></span></h1>
+
+        </nav>
+      </header>
+
+    </div>
+  </div>
+    <!-- question 1 -->
+    <div class="row">
+      <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+        <h1 id="question">Question 1</h1>
+        <h2>What is PALINDROME NUMBER?</h2><br>
+        <h1 id="desc">Description</h1>
+        <h2>A palindromic number or numeral palindrome is a number that remains the same when its digits are reversed. Like 16461, </h2><br>
+        <img src="p.png" alt="image" height="200px" width="400px" align="middle">
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 ">
+
+           <div class="dropdown">
+    <button  class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"  ><p id="show">C</p><span class="caret"></span>
+  </button>
+    <ul class="dropdown-menu">
+      <li><a href="#" id="c"  >C</a></li>
+        <li><a href="#" id="java">JAVA</a></li>
+    </ul>
+  </div><br>
+  <div id='code1' class="col-lg-12 col-sm-12 col-md-12 col-xs-12 jumbotron">
+<pre><code>#include &lt;stdio.h&gt;
+int main()
+{
+    int n, reversedInteger = 0, remainder, originalInteger;
+
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+
+    originalInteger = n;
+
+    // reversed integer is stored in variable
+    while( n!=0 )
+    {
+        remainder = n%10;
+        reversedInteger = reversedInteger*10 + remainder;
+        n /= 10;
+    }
+
+    // palindrome if orignalInteger and reversedInteger are equal
+    if (originalInteger == reversedInteger)
+        printf("%d is a palindrome.", originalInteger);
+    else
+        printf("%d is not a palindrome.", originalInteger);
+
+    return 0;
+}</code></pre>
+        </div>
+        <div style="display:none;" id='code2' class="col-lg-12 col-sm-12 col-md-12 col-xs-12 jumbotron ">
+      <pre><code>class PalindromeExample{
+ public static void main(String args[]){
+  int r,sum=0,temp;
+  int n=454;//It is the number variable to be checked for palindrome
+
+  temp=n;
+  while(n>0){
+   r=n%10;  //getting remainder
+   sum=(sum*10)+r;
+   n=n/10;
+  }
+  if(temp==sum)
+   System.out.println("palindrome number ");
+  else
+   System.out.println("not palindrome");
+}
+}  </code></pre>
+              </div>
+      </div>
+
+
+
+      </div>
+
+    </div><hr>
+    <!-- question 2 -->
+    <div class="row">
+      <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+        <h1 id="question">Question 2</h1>
+        <h2>What is FIBONACCI SERIES?</h2><br>
+        <h1 id="desc">Description</h1>
+        <h2> <p>
+
+The Fibonacci Sequence is the series of numbers:<br>
+
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ... <br>
+
+The next number is found by adding up the two numbers before it. <br>
+
+The 2 is found by adding the two numbers before it (1+1). <br>
+The 3 is found by adding the two numbers before it (1+2).<br>
+And the 5 is (2+3).<br>
+and so on!<br>
+<img src="fib.png" alt="">
+</p> </h2><br>
+
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 ">
+
+           <div class="dropdown">
+    <button  class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"  ><p id="show1">C</p><span class="caret"></span>
+  </button>
+    <ul class="dropdown-menu">
+      <li><a id="c1" >C</a></li>
+        <li><a id="java1">JAVA</a></li>
+    </ul>
+  </div><br>
+  <div style="display:block;" id='code3'  class="col-lg-12 col-sm-12 col-md-12 col-xs-12 jumbotron">
+<pre><code>#include &lt;stdio.h&gt;
+  int main()
+  {
+      int i, n, t1 = 0, t2 = 1, nextTerm;
+
+      printf("Enter the number of terms: ");
+      scanf("%d", &n);
+
+      printf("Fibonacci Series: ");
+
+      for (i = 1; i <= n; ++i)
+      {
+          printf("%d, ", t1);
+          nextTerm = t1 + t2;
+          t1 = t2;
+          t2 = nextTerm;
+      }
+      return 0;
+}</code></pre>
+        </div>
+        <div style="display:none;" id='code4' class="col-lg-12 col-sm-12 col-md-12 col-xs-12 jumbotron ">
+      <pre><code>public class Fibonacci {
+
+    public static void main(String[] args) {
+
+        int n = 10, t1 = 0, t2 = 1;
+        System.out.print("First " + n + " terms: ");
+
+        for (int i = 1; i <= n; ++i)
+        {
+            System.out.print(t1 + " + ");
+
+            int sum = t1 + t2;
+            t1 = t2;
+            t2 = sum;
+        }
+    }
+}
+ </code></pre>
+              </div>
+      </div>
+
+
+
+      </div>
+
+    </div><hr>
+    <!-- QUESTION: 3 -->
+    <div class="row">
+      <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+        <h1 id="question">Question 3</h1>
+        <h2>What is FACTORIAL NUMBER?</h2><br>
+        <h1 id="desc">Description</h1>
+        <h2>The product of an integer and all the integers below it; e.g. factorial four ( 4! ) is equal 24(4*3*2*1)</h2>
+<img src="f.gif" alt="">
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 ">
+
+           <div class="dropdown">
+    <button  class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"  ><p id="show3">C</p><span class="caret"></span>
+  </button>
+    <ul class="dropdown-menu">
+      <li><a id="c2" >C</a></li>
+        <li><a id="java2">JAVA</a></li>
+    </ul>
+  </div><br>
+  <div style="display:block;" id='code5'  class="col-lg-12 col-sm-12 col-md-12 col-xs-12 jumbotron">
+<pre><code>#include &lt;stdio.h&gt;
+  int main()
+{
+    int n, i;
+    unsigned long long factorial = 1;
+
+    printf("Enter an integer: ");
+    scanf("%d",&n);
+
+    // show error if the user enters a negative integer
+    if (n < 0)
+        printf("Error! Factorial of a negative number doesn't exist.");
+
+    else
+    {
+        for(i=1; i<=n; ++i)
+        {
+            factorial *= i;              // factorial = factorial*i;
+        }
+        printf("Factorial of %d = %llu", n, factorial);
+    }
+
+    return 0;
+}</code></pre>
+        </div>
+        <div style="display:none;" id='code6' class="col-lg-12 col-sm-12 col-md-12 col-xs-12 jumbotron ">
+      <pre><code>class FactorialExample{
+ public static void main(String args[]){
+  int i,fact=1;
+  int number=5;//It is the number to calculate factorial
+  for(i=1;i<=number;i++){
+      fact=fact*i;
+  }
+  System.out.println("Factorial of "+number+" is: "+fact);
+ }
+}
+ </code></pre>
+              </div>
+      </div>
+
+
+
+      </div>
+
+    </div><hr>
+    <!-- QUESTION: 4 -->
+    <div class="row">
+      <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+        <h1 id="question">Question 4</h1>
+        <h2>What is BUBBLE SORT?</h2><br>
+        <h1 id="desc">Description</h1>
+        <h2>Bubble sort is a simple sorting algorithm. This sorting algorithm is comparison-based algorithm in which each pair of adjacent elements is compared and the elements are swapped if they are not in order.</h2>
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 ">
+
+           <div class="dropdown">
+    <button  class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"  ><p id="show3">C</p><span class="caret"></span>
+  </button>
+    <ul class="dropdown-menu">
+      <li><a id="c3" >C</a></li>
+        <li><a id="java3">JAVA</a></li>
+    </ul>
+  </div><br>
+  <div style="display:block;" id='code7'  class="col-lg-12 col-sm-12 col-md-12 col-xs-12 jumbotron">
+<pre><code>#include &lt;stdio.h&gt;
+void swap(int *xp, int *yp)
+{
+    int temp = *xp;
+    *xp = *yp;
+    *yp = temp;
+}
+
+// A function to implement bubble sort
+void bubbleSort(int arr[], int n)
+{
+   int i, j;
+   for (i = 0; i < n-1; i++)
+
+       // Last i elements are already in place
+       for (j = 0; j < n-i-1; j++)
+           if (arr[j] > arr[j+1])
+              swap(&arr[j], &arr[j+1]);
+}
+
+/* Function to print an array */
+void printArray(int arr[], int size)
+{
+    int i;
+    for (i=0; i < size; i++)
+        printf("%d ", arr[i]);
+    printf("n");
+}
+
+// Driver program to test above functions
+int main()
+{
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    bubbleSort(arr, n);
+    printf("Sorted array: \n");
+    printArray(arr, n);
+    return 0;
+}
+</code></pre>
+        </div>
+        <div style="display:none;" id='code8' class="col-lg-12 col-sm-12 col-md-12 col-xs-12 jumbotron ">
+      <pre><code>public class BubbleSortExample {
+    static void bubbleSort(int[] arr) {
+        int n = arr.length;
+        int temp = 0;
+         for(int i=0; i < n; i++){
+                 for(int j=1; j < (n-i); j++){
+                          if(arr[j-1] > arr[j]){
+                                 //swap elements
+                                 temp = arr[j-1];
+                                 arr[j-1] = arr[j];
+                                 arr[j] = temp;
+                         }
+
+                 }
+         }
+
+    }
+    public static void main(String[] args) {
+                int arr[] ={3,60,35,2,45,320,5};
+
+                System.out.println("Array Before Bubble Sort");
+                for(int i=0; i < arr.length; i++){
+                        System.out.print(arr[i] + " ");
+                }
+                System.out.println();
+
+                bubbleSort(arr);//sorting array elements using bubble sort
+
+                System.out.println("Array After Bubble Sort");
+                for(int i=0; i < arr.length; i++){
+                        System.out.print(arr[i] + " ");
+                }
+
+        }
+}
+ </code></pre>
+              </div>
+      </div>
+
+
+
+      </div>
+
+    </div><hr>
+    <!-- QUESTION: 5 -->
+    <div class="row">
+      <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+        <h1 id="Question">Question 5</h1>
+        <h2>Find the 3rd Largest Number in an ARRAY?</h2><br>
+        <h1 id="desc">Description</h1>
+        <h2>To Find  the 3rd Largest number in a array, We have to sort the array and  then choose the third largest number from it.</h2>
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 ">
+
+           <div class="dropdown">
+    <button  class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"  ><p id="show4">C</p><span class="caret"></span>
+  </button>
+    <ul class="dropdown-menu">
+      <li><a id="c4" >C</a></li>
+        <li><a id="java4">JAVA</a></li>
+    </ul>
+  </div><br>
+  <div style="display:block;" id='code9'  class="col-lg-12 col-sm-12 col-md-12 col-xs-12 jumbotron">
+<pre><code>#include &lt;stdio.h&gt;
+  void thirdLargest(int arr[], int arr_size)
+  {
+      /* There should be atleast three elements */
+      if (arr_size < 3)
+      {
+          printf(" Invalid Input ");
+          return;
+      }
+
+      // Initialize first, second and third Largest element
+      int first = arr[0], second = INT_MIN, third = INT_MIN;
+
+      // Traverse array elements to find the third Largest
+      for (int i = 1; i < arr_size ; i ++)
+      {
+          /* If current element is greater than first,
+             then update first, second and third */
+          if (arr[i] > first)
+          {
+              third  = second;
+              second = first;
+              first  = arr[i];
+          }
+
+          /* If arr[i] is in between first and second */
+          else if (arr[i] > second)
+          {
+              third = second;
+              second = arr[i];
+          }
+
+          /* If arr[i] is in between second and third */
+          else if (arr[i] > third)
+              third = arr[i];
+      }
+
+      printf("The third Largest element is %d\n", third);
+  }
+
+  /* Driver program to test above function */
+  int main()
+  {
+      int arr[] = {12, 13, 1, 10, 34, 16};
+      int n = sizeof(arr)/sizeof(arr[0]);
+      thirdLargest(arr, n);
+      return 0;
+  }</code></pre>
+        </div>
+        <div style="display:none;" id='code10' class="col-lg-12 col-sm-12 col-md-12 col-xs-12 jumbotron ">
+      <pre><code>public class ThirdLargestInArrayExample{
+public static int getThirdLargest(int[] a, int total){
+int temp;
+for (int i = 0; i < total; i++)
+        {
+            for (int j = i + 1; j < total; j++)
+            {
+                if (a[i] > a[j])
+                {
+                    temp = a[i];
+                    a[i] = a[j];
+                    a[j] = temp;
+                }
+            }
+        }
+       return a[total-3];
+}
+public static void main(String args[]){
+int a[]={1,2,5,6,3,2};
+int b[]={44,66,99,77,33,22,55};
+System.out.println("Third Largest: "+getThirdLargest(a,6));
+System.out.println("Third Largest: "+getThirdLargest(b,7));
+}}
+ </code></pre>
+              </div>
+      </div>
+
+
+
+      </div>
+
+    </div><hr>
+
+
+
+   <script>
+$(document).ready(function(){
+
+
+    $("#c").click(function(){
+
+      $("#show").text("C");
+        $("#code1").show();
+        $("#code2").hide();
+
+    });
+    $("#java").click(function(){
+    $("#show").text("JAVA");
+    $("#code2").css("display","block");
+    $("#code1").hide();
+    });
+    $("#c1").click(function(){
+
+      $("#show1").text("C");
+        $("#code3").show();
+        $("#code4").hide();
+
+    });
+    $("#java1").click(function(){
+    $("#show1").text("JAVA");
+    $("#code4").css("display","block");
+    $("#code3").hide();
+    });
+    $("#c2").click(function(){
+
+      $("#show2").text("C");
+        $("#code5").show();
+        $("#code6").hide();
+
+    });
+    $("#java2").click(function(){
+    $("#show2").text("JAVA");
+    $("#code6").css("display","block");
+    $("#code5").hide();
+    });
+    $("#c3").click(function(){
+
+      $("#show3").text("C");
+        $("#code7").show();
+        $("#code8").hide();
+
+    });
+    $("#java3").click(function(){
+    $("#show3").text("JAVA");
+    $("#code8").css("display","block");
+    $("#code7").hide();
+    });
+
+    $("#c4").click(function(){
+
+      $("#show4").text("C");
+        $("#code9").show();
+        $("#code10").hide();
+
+    });
+    $("#java4").click(function(){
+    $("#show4").text("JAVA");
+    $("#code10").css("display","block");
+    $("#code9").hide();
+    });
+
+
+});
+
+</script>
+<footer>
+  <h4>@PSYCHO_CODES</h4>
+</footer>
+  </body>
+</html>

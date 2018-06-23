@@ -1,0 +1,23 @@
+h2{
+  text-align: center;
+  color: #3885a1;
+}
+
+#me
+{
+  background-color:#091230;
+}
+#question
+{
+  color: #4f4341;
+}
+img
+{
+  margin-left:30%;
+}
+h4
+{
+  text-align: right;
+  font-weight: 400;
+  margin-right: 10px;
+}
